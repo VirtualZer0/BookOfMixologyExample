@@ -1,0 +1,51 @@
+html {
+  --bg-color: #fff;
+  --text-color: #333;
+  --main-color: #ac92eb;
+  --muted-color: #777;
+  --block-gap: 1.25rem;
+  --page-gap: 1.25rem;
+  --inner-gap: 1rem;
+  --block-radius: 16px;
+
+  @media (max-width: 720px) {
+    --block-gap: 1rem;
+    --page-gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    --page-gap: 0.75rem;
+  }
+}
+
+@property --cocktail-color-1 {
+  syntax: '<color>';
+  initial-value: #fddb92;
+  inherits: false;
+}
+
+@property --cocktail-color-2 {
+  syntax: '<color>';
+  initial-value: #d1fdff;
+  inherits: false;
+}
+
+.margarita {
+  --cocktail-color-1: #fddb92;
+  --cocktail-color-2: #d1fdff;
+}
+
+.mojito {
+  --cocktail-color-1: #d4fc79;
+  --cocktail-color-2: #96e6a1;
+}
+
+.a1 {
+  --cocktail-color-1: #ffecd2;
+  --cocktail-color-2: #fcb69f;
+}
+
+.kir {
+  --cocktail-color-1: #ebbba7;
+  --cocktail-color-2: #cfc7f8;
+}

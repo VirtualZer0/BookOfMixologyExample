@@ -1,0 +1,65 @@
+@use 'vars.scss';
+@use 'anims.scss';
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  background-image: linear-gradient(to right, var(--cocktail-color-1) 0%, var(--cocktail-color-2) 100%);
+  justify-content: center;
+  width: 100%;
+  padding: var(--page-gap);
+  min-height: calc(100vh - var(--page-gap));
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  transition:
+    --cocktail-color-1 1s,
+    --cocktail-color-2 1s;
+}
+
+#app {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--block-gap);
+}
+
+.gradient-color-1 {
+  color: var(--cocktail-color-1);
+}
+
+.gradient-color-2 {
+  color: var(--cocktail-color-2);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 100%, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: var(--block-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #967adc;
+}
